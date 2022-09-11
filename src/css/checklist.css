@@ -1,0 +1,10 @@
+@media (min-width: 40.0625em) {
+  td {
+    font-size: inherit;
+    line-height: normal;
+  }
+}
+
+.nhsuk-table-responsive thead {
+  white-space: inherit;
+}

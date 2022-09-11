@@ -1,0 +1,351 @@
+---
+layout: layout.njk
+title: Accessibility checklist
+---
+
+<style>
+  th button,
+  th button:hover {
+  background-color: transparent;
+  border-width: 0;
+  -webkit-box-shadow: 0 0 0 0;
+  -moz-box-shadow: 0 0 0 0;
+  box-shadow: 0 0 0 0;
+  color: #005ea5;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  padding: 0 10px 0 0;
+  position: relative;
+  text-align: inherit;
+  font-size: 1em;
+  margin: 0;
+}
+
+th button:focus {
+  background-color: #fd0;
+  color: #0b0c0c;
+  box-shadow: 0 -2px #fd0, 0 4px #0b0c0c;
+  outline: none;
+}
+
+th:first-child button {
+  right: auto;
+}
+
+th button:before {
+  content: " \25bc";
+  position: absolute;
+  right: -1px;
+  top: 9px;
+  font-size: 0.5em;
+}
+
+th button:after {
+  content: " \25b2";
+  position: absolute;
+  right: -1px;
+  top: 1px;
+  font-size: 0.5em;
+}
+
+[aria-sort="ascending"] button:before,
+[aria-sort="descending"] button:before {
+  content: none;
+}
+
+[aria-sort="ascending"] button:after {
+  content: " \25b2";
+  font-size: .8em;
+  position: absolute;
+  right: -5px;
+  top: 2px;
+}
+
+[aria-sort="descending"] button:after {
+  content: " \25bc";
+  font-size: .8em;
+  position: absolute;
+  right: -5px;
+  top: 2px;
+}
+</style>
+
+<!--
+<ul>
+{%- for pages in collections.pages -%}
+  <li><a href="{{ pages.url }}"{% if pages.url == page.url %} aria-current="page"{% endif %}>{{ pages.data.title }}</a></li>
+{%- endfor -%}
+</ul>
+-->
+
+<h1>{{ title }}</h1>
+
+<!--
+Sort by:
+  - Level A
+  - Level AA
+  - Severity - Blocker
+  - Severity - Severe
+  - Severity - Moderate
+  - Severity - Minor
+  - Responsibility - Developer
+  - Responsibility - Designer
+  - Responsibility - Content
+-->
+
+<table class="sortable show-unsorted-icon nhsuk-table-responsive">
+  <caption class="nhsuk-table__caption">Accessibility checklist<span class="nhsuk-u-visually-hidden">, column headers with buttons are sortable</span></caption>
+<thead role="rowgroup" class="nhsuk-table__head">
+<tr role="row">
+  <th role="columnheader" scope="col" class="sortable-col">Interaction</th>
+  <th role="columnheader" scope="col" class="sortable-col">Success criteria</th>
+  <th role="columnheader" scope="col" class="sortable-col">Level</th>
+  <th role="columnheader" scope="col">Description</th>
+  <th role="columnheader" scope="col" class="sortable-col">Severity</th>
+  <th role="columnheader" scope="col" class="sortable-col">Responsibility</th>
+  <th role="columnheader" scope="col" class="sortable-col">Knowledge to test</th>
+  <th role="columnheader" scope="col" class="sortable-col">Time to test</th>
+  <th role="columnheader" scope="col" class="sortable-col">Test procedure</th>
+  <th role="columnheader" scope="col">Understanding success criteria</th>
+  {# <th role="columnheader" scope="col">Principal</th>
+  <th role="columnheader" scope="col">Conformance Level</th> #}
+</tr>
+</thead>
+<tbody class="nhsuk-table__body">
+{#  {% set count = 1 %} #}
+
+{%- for pages in collections.pages -%}
+
+{# {%- for pages in collections.getIteraction -%} #}
+
+{# Use tags to do filtering {%- for pages in collections.Developer -%} #}
+{# Use front matter value to filter {%- if pages.data.responsibility == "Designer" -%} for Designer only or {%- if "Designer" in pages.data.responsibility -%} if includes Designer (and others) #}
+
+<tr class="nhsuk-table__row">
+  <td class="nhsuk-table__cell"><!--{{ count }}--> <span class="nhsuk-table-responsive__heading">Interaction </span>{{ pages.data.interaction | join(",  ") | safe  }}</td>
+  <td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Success criteria </span>{{ pages.data.successCriteria }}</td>
+  <td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Level </span>{{ pages.data.conformanceLevel }}</td>
+  <td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Description </span><a href="{{ pages.url }}">{{ pages.data.description }}</a></td>
+  <td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Severity </span>{{ pages.data.severity | join(",<br> ") | safe }}</td>
+  <td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Responsibility </span>{{ pages.data.responsibility | join(",<br> ") | safe }}</td>
+  <td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Knowledge to test </span>{{ pages.data.knowledgeToTest }}</td>
+  <td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Time to test </span>{{ pages.data.timeToTest | join(",<br> ") | safe }}</td>
+  <td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Test procedure </span>{{ pages.data.testProcedure | join(",<br> ") | safe }}</td>
+  <td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Understanding success criteria </span><a href="{{ pages.data.understandingScURL }}">{{ pages.data.understandingScURL }}</a></td>
+  {# <td class="nhsuk-table__cell">{{ pages.data.principal }}</td>
+  <td class="nhsuk-table__cell">{{ pages.data.conformance }}</td> #}
+</tr>
+{# {%- endif -%} #}
+
+{# {% set count = count + 1 %} #}
+
+{%- endfor -%}
+</tbody>
+</table>
+
+<script>
+/*
+ *   This content is licensed according to the W3C Software License at
+ *   https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
+ *
+ *   File:   sortable-table.js
+ *
+ *   Desc:   Adds sorting to a HTML data table that implements ARIA Authoring Practices
+ */
+
+'use strict';
+
+class SortableTable {
+  constructor(tableNode) {
+    this.tableNode = tableNode;
+
+    this.columnHeaders = tableNode.querySelectorAll('thead th.sortable-col');
+
+    this.sortColumns = [];
+
+    for (var i = 0; i < this.columnHeaders.length; i++) {
+      var ch = this.columnHeaders[i];
+      var headerText = ch.innerHTML;
+      var headerButton = '<button>'+headerText+'</button>';
+      ch.innerHTML = headerButton;
+
+      var buttonNode = ch.querySelector('button');
+      if (buttonNode) {
+        this.sortColumns.push(i);
+        buttonNode.setAttribute('data-column-index', i);
+        buttonNode.addEventListener('click', this.handleClick.bind(this));
+      }
+    }
+
+    this.divHtml = '<div aria-live="polite" role="status" aria-atomic="true" class="nhsuk-u-visually-hidden"></div>';
+    this.tableNode.insertAdjacentHTML("afterend", this.divHtml)
+
+    /*
+    this.optionCheckbox = document.querySelector(
+      'input[type="checkbox"][value="show-unsorted-icon"]'
+    );
+    */
+    /*
+    if (this.optionCheckbox) {
+      this.optionCheckbox.addEventListener(
+        'change',
+        this.handleOptionChange.bind(this)
+      );
+      if (this.optionCheckbox.checked) {
+        this.tableNode.classList.add('show-unsorted-icon');
+      }
+    }
+    */
+
+  //var tableObj = document.querySelector('table.sortable');
+  //var ariaHtml = '<div id="message" aria-live="polite" role="status" aria-atomic="true" class="nhsuk-u-visually-hidden"></div>';
+  //tableObj.insertAdjacentHTML("afterend", ariaHtml);
+  // this.tableNode.insertAdjacentHTML("afterend", '<div id="message" aria-live="polite" role="status" aria-atomic="true" class="nhsuk-u-visually-hidden"></div>');
+
+  }
+
+  setColumnHeaderSort(columnIndex) {
+    if (typeof columnIndex === 'string') {
+      columnIndex = parseInt(columnIndex);
+    }
+
+    for (var i = 0; i < this.columnHeaders.length; i++) {
+      var ch = this.columnHeaders[i];
+      var buttonNode = ch.querySelector('button');
+      if (i === columnIndex) {
+        var value = ch.getAttribute('aria-sort');
+        if (value === 'descending') {
+          ch.setAttribute('aria-sort', 'ascending');
+          this.sortColumn(
+            columnIndex,
+            'ascending',
+            ch.classList.contains('num')
+          );
+          this.updateStatus(
+            'Sort by ' + buttonNode.innerText + ' (ascending)',
+          );
+        } else {
+          ch.setAttribute('aria-sort', 'descending');
+          this.sortColumn(
+            columnIndex,
+            'descending',
+            ch.classList.contains('num')
+          );
+          this.updateStatus(
+            'Sort by ' + buttonNode.innerText + ' (descending)',
+          );
+        }
+      } else {
+        if (ch.hasAttribute('aria-sort') && buttonNode) {
+          ch.removeAttribute('aria-sort');
+        }
+      }
+    }
+  }
+
+  updateStatus(statusMessage) {
+    var messageDiv = this.tableNode.nextElementSibling;
+    var mesg = statusMessage;
+    messageDiv.innerHTML = mesg;
+  }
+
+  sortColumn(columnIndex, sortValue, isNumber) {
+    function compareValues(a, b) {
+      if (sortValue === 'ascending') {
+        if (a.value === b.value) {
+          return 0;
+        } else {
+          if (isNumber) {
+            return a.value - b.value;
+          } else {
+            return a.value < b.value ? -1 : 1;
+          }
+        }
+      } else {
+        if (a.value === b.value) {
+          return 0;
+        } else {
+          if (isNumber) {
+            return b.value - a.value;
+          } else {
+            return a.value > b.value ? -1 : 1;
+          }
+        }
+      }
+    }
+
+    if (typeof isNumber !== 'boolean') {
+      isNumber = false;
+    }
+
+    var tbodyNode = this.tableNode.querySelector('tbody');
+    var rowNodes = [];
+    var dataCells = [];
+
+    var rowNode = tbodyNode.firstElementChild;
+
+    var index = 0;
+    while (rowNode) {
+      rowNodes.push(rowNode);
+      var rowCells = rowNode.querySelectorAll('th, td');
+      var dataCell = rowCells[columnIndex];
+
+      var data = {};
+      data.index = index;
+      data.value = dataCell.textContent.toLowerCase().trim();
+      if (isNumber) {
+        data.value = parseFloat(data.value);
+      }
+      dataCells.push(data);
+      rowNode = rowNode.nextElementSibling;
+      index += 1;
+    }
+
+    dataCells.sort(compareValues);
+
+    // remove rows
+    while (tbodyNode.firstChild) {
+      tbodyNode.removeChild(tbodyNode.lastChild);
+    }
+
+    // add sorted rows
+    for (var i = 0; i < dataCells.length; i += 1) {
+      tbodyNode.appendChild(rowNodes[dataCells[i].index]);
+    }
+  }
+
+  /* EVENT HANDLERS */
+
+  handleClick(event) {
+    var tgt = event.currentTarget;
+    this.setColumnHeaderSort(tgt.getAttribute('data-column-index'));
+    //console.log('clicked');
+    //this.updateStatus();
+  }
+
+  /*
+  handleOptionChange(event) {
+    var tgt = event.currentTarget;
+
+    if (tgt.checked) {
+      this.tableNode.classList.add('show-unsorted-icon');
+    } else {
+      this.tableNode.classList.remove('show-unsorted-icon');
+    }
+  }
+  */
+}
+
+// Initialize sortable table buttons
+window.addEventListener('load', function () {
+
+  var sortableTables = document.querySelectorAll('table.sortable');
+
+  for (var i = 0; i < sortableTables.length; i++) {
+    new SortableTable(sortableTables[i]);
+  }
+
+});
+</script>
