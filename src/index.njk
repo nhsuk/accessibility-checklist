@@ -127,7 +127,7 @@ Sort by:
   <td class="nhsuk-table__cell"><!--{{ count }}--> <span class="nhsuk-table-responsive__heading">Interaction </span>{{ pages.data.interaction | join(",  ") | safe  }}</td>
   <td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Success criteria </span>{{ pages.data.successCriteria }}</td>
   <td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Level </span>{{ pages.data.conformanceLevel }}</td>
-  <td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Description </span><a href="{{ pages.url }}">{{ pages.data.description }}</a></td>
+  <td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Description </span><a href="{{ pages.url | url }}">{{ pages.data.description }}</a></td>
   <td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Severity </span>{{ pages.data.severity | join(",<br> ") | safe }}</td>
   <td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Responsibility </span>{{ pages.data.responsibility | join(",<br> ") | safe }}</td>
   <td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Knowledge to test </span>{{ pages.data.knowledgeToTest }}</td>
