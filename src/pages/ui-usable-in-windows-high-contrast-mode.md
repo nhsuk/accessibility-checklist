@@ -4,7 +4,7 @@ tags: pages
 title: The interface is usable in Windows High Contrast mode
 
 conformanceLevel:
-  -
+  - Best practice
 description:
   - The interface is usable in Windows High Contrast mode
 filters:
@@ -14,25 +14,21 @@ interaction:
 knowledgeToTest:
   - Easy
 principal:
-  -
 priority:
-  -
 responsibility:
   - Developer
 severity:
-  -
 successCriteria:
-  -
+  - None
 testProcedure:
   - Manual
   - Windows
 timeToTest:
   - Quick
 topic:
-  - Contrast
   - Code
+  - Contrast
 understandingScURL:
-  -
 userImpact:
   - Text must meet a minimum contrast ratio to ensure users – especially those with low vision – can read comfortably
 ---

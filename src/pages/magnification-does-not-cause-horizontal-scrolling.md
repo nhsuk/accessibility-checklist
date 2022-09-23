@@ -4,7 +4,7 @@ tags: pages
 title: Magnification software users do not have to unnecessarily scroll horizontal to find content
 
 conformanceLevel:
-  -
+  - Best practice
 description:
   - Magnification software users do not have to unnecessarily scroll horizontal to find content
 filters:
@@ -14,15 +14,12 @@ interaction:
 knowledgeToTest:
   - Easy
 principal:
-  -
 priority:
-  -
 responsibility:
   - Designer
 severity:
-  -
 successCriteria:
-  -
+  - None
 testProcedure:
   - Manual
   - Visual inspection
@@ -31,9 +28,7 @@ timeToTest:
 topic:
   - Layout
 understandingScURL:
-  -
 userImpact:
-  -
 ---
 
 # {{ title }}
