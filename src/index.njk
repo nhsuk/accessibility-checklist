@@ -20,7 +20,7 @@ title: Accessibility checklist
       <th role="columnheader" scope="col" class="sortable-col">Knowledge to test</th>
       <th role="columnheader" scope="col" class="sortable-col">Time to test</th>
       <th role="columnheader" scope="col">Test procedure</th>
-      <th role="columnheader" scope="col">Understanding success criteria</th>
+      <!-- <th role="columnheader" scope="col">Understanding success criteria</th> -->
     </tr>
   </thead>
 
@@ -36,9 +36,19 @@ title: Accessibility checklist
           {{ pages.data.interaction | join(",  ") | safe  }}
         {%- endif %}
       </td>
+      
+      
+      
       <td class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Success criteria </span>{{ pages.data.successCriteria }}
+        <span class="nhsuk-table-responsive__heading">Success criteria </span>
+        {%- if pages.data.understandingScURL -%}
+          <a href="{{ pages.data.understandingScURL }}">{{ pages.data.successCriteria }}</a>
+        {%- else %}
+          {{ pages.data.successCriteria }}
+        {%- endif %}
       </td>
+      
+      
       <td class="nhsuk-table__cell">
         <span class="nhsuk-table-responsive__heading">Level </span>{{ pages.data.conformanceLevel }}
       </td>
@@ -75,12 +85,12 @@ title: Accessibility checklist
           {{ pages.data.testProcedure | join(",<br> ") | safe }}
         {%- endif %}
       </td>
-      <td class="nhsuk-table__cell">
+      <!-- <td class="nhsuk-table__cell">
         <span class="nhsuk-table-responsive__heading">Understanding success criteria </span>
         {%- if pages.data.understandingScURL -%}
           <a href="{{ pages.data.understandingScURL }}">{{ pages.data.understandingScURL }}</a>
         {%- endif %}
-      </td>
+      </td> -->
     </tr>
   {%- endfor -%}
   </tbody>
