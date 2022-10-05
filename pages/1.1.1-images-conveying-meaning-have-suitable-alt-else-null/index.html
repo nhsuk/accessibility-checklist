@@ -1,0 +1,127 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Images that convey meaning have suitable alternative text and images that serve a decorative purpose have a null alternative text assigned - Accessibility checklist </title>
+    <link rel="stylesheet" href="/accessibility-checklist/css/nhsuk-frontend.css">
+    <link rel="stylesheet" href="/accessibility-checklist/css/checklist.css">
+    <script src="/accessibility-checklist/js/scripts2.js" defer></script>
+  </head>
+  <body>
+
+  <header class="nhsuk-header" role="banner">
+    <div class="nhsuk-width-container-fluid nhsuk-header__container">
+      <div class="nhsuk-header__logo"><a class="nhsuk-header__link nhsuk-header__link--service" href="/accessibility-checklist/">
+          <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 16" height="40" width="100">
+            <path class="nhsuk-logo__background" fill="#005eb8" d="M0 0h40v16H0z"></path>
+            <path class="nhsuk-logo__text" fill="#fff" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"></path>
+          </svg>
+          <span class="nhsuk-header__service-name">
+            Accessibility checklist
+        </span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+<div class="nhsuk-width-container-fluid">
+    <main class="nhsuk-main-wrapper" id="maincontent">
+    
+    
+        
+    <div class="nhsuk-back-link">
+  <a class="nhsuk-back-link__link" href="/accessibility-checklist/">
+    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+      <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+    </svg>
+    Back to checklist</a>
+</div>
+<h1>Images that convey meaning have suitable alternative text and images that serve a decorative purpose have a null alternative text assigned</h1>
+<h2>Design Notes</h2>
+<h3>Ensure images and charts have an appropriate text alternative</h3>
+<p>People who can't see a meaningful image need an alternative to understand the content. You need to add &quot;alt-text&quot; to explain what's in the image.</p>
+<h4>Informative images</h4>
+<p>The content of the alt-text depends on the image and its context. If the image is part of the main content of the page (not a functional image - one that triggers an action), use the alt-text to describe the image in a way that makes sense in the context.</p>
+<p>You don't need to explain that it's an image because screenreaders usually announce that. Keep alt-text to a sentence or 2 and no longer than 250 characters.</p>
+<p>Imagine you were reading the page out to a friend. How would you describe the image?</p>
+<p>If you have a complex image that you can't describe in short alt-text (such as an infographic), include a longer description in some other way. You can use an expander, for example, underneath the infographic with a text explanation.</p>
+<p>If your image has text which conveys its meaning, follow the guidance on functional images. An example would be a link to a health app which includes a brand image and the name of the app. The app name says the same as the brand image, so the image doesn't need explaining.</p>
+<h4>Decorative images</h4>
+<p>Decorative images are there to attract users' attention or motivate them, but they don't help users understand the topic. An example might be a stock photo of a person holding a mobile phone on the 'Contact Us' page.</p>
+<p>If your image is decorative, give it a null text alternative like this: (alt=&quot;&quot;).</p>
+<h4>More information</h4>
+<ul>
+<li><a href="https://www.w3.org/WAI/tutorials/images/decision-tree/">Alternative Text Decision Tree</a></li>
+<li><a href="https://www.w3.org/TR/html51/semantics-embedded-content.html#alt-text">HTML 5.1: Requirements for providing text to act as an alternative for images</a></li>
+<li><a href="https://www.benjystanton.co.uk/blog/a-plan-for-accessible-charts/">A plan for accessible charts</a></li>
+<li><a href="https://www.w3.org/WAI/tutorials/images/complex/">W3C Tutorials: Complex Images</a></li>
+</ul>
+<h2>Developer Notes</h2>
+<h3>Use alternative text for images in content</h3>
+<h4>Informative</h4>
+<p>Provide equivalent alternative text descriptions for non-text content such as images and multimedia to allow people using assistive technologies to understand and enjoy the content on the page.</p>
+<p>All images need to have an alt attribute or titles, for SVGs, assigned.</p>
+<h5>Informative images detail</h5>
+<p>The content of the alt-text depends on the image and its context. If the image is part of the main content of the page (not a functional image - one that triggers an action), use the alt-text to describe the image in a way that makes sense in the context.</p>
+<p>You don't need to explain that it's an image because screenreaders usually announce that. Keep alt-text to a sentence or 2 and no longer than 250 characters.</p>
+<p>Imagine you were reading the page out to a friend. How would you describe the image?</p>
+<h4>Decorative</h4>
+<p>Images that serve a decorative purpose should have a null value (alt=&quot;&quot;) so that screen readers can ignore the image. If images are not assigned a null value it can result in a repetitive or confusing experience for screen reader users.</p>
+<h4>Complex</h4>
+<p>Infographics require an alternative description in the form of a transcript, this provides a full text-only version of the infographic which can be easily accessed by all users. This can be done by either:</p>
+<ul>
+<li>Providing a link to a new page which contains the transcript;</li>
+<li>Placing the transcript below the image within an accordion, which allow users to hide and show the transcript.</li>
+</ul>
+<p>For charts, allow users to access equivalent information in the form of an HTML data table.</p>
+<h4>Information and tools</h4>
+<ul>
+<li><a href="https://www.benjystanton.co.uk/blog/a-plan-for-accessible-charts/">https://www.benjystanton.co.uk/blog/a-plan-for-accessible-charts/</a></li>
+<li><a href="https://www.benjystanton.co.uk/blog/a-plan-for-accessible-maps/">https://www.benjystanton.co.uk/blog/a-plan-for-accessible-maps/</a></li>
+<li><a href="https://www.w3.org/WAI/tutorials/images/complex/">https://www.w3.org/WAI/tutorials/images/complex/</a></li>
+</ul>
+<h3>Use alternative text for functional images</h3>
+<p>Some images are &quot;functional&quot;. That means that they initiate actions. If people can't see the image, they need an alternative. The alternative text should describe the action the user is taking rather than the describing the image.</p>
+<p>Use &quot;alt‑text&quot; for images like PNG or JPEG. If using an SVG for a functional image, ensure focusable=&quot;false&quot; attribute is used to prevent focus issues with older browsers and use the <code>&lt;title&gt;</code> of the SVG to provide alt text.</p>
+<h4>Information and tools</h4>
+<ul>
+<li><a href="https://www.w3.org/WAI/tutorials/images/functional/">W3C guide to functional images</a></li>
+</ul>
+<h2>Testing Notes</h2>
+<h3>There are appropriate alternatives for all non-text content</h3>
+<p>Each (non-decorative) image has appropriate alt text</p>
+<p>All non-text content that is presented to the user has a text alternative that serves the equivalent purpose</p>
+<h4>Details of exceptions</h4>
+<ul>
+<li>Controls, Input: If non-text content is a control or accepts user input, then it has a name that describes its purpose</li>
+<li>Time-Based Media: If non-text content is time-based media, then text alternatives at least provide descriptive identification of the non-text content</li>
+<li>Test: If non-text content is a test or exercise that would be invalid if presented in text, then text alternatives at least provide descriptive identification of the non-text content.</li>
+<li>Sensory: If non-text content is primarily intended to create a specific sensory experience, then text alternatives at least provide descriptive identification of the non-text content.</li>
+<li>CAPTCHA: If the purpose of non-text content is to confirm that content is being accessed by a person rather than a computer, then text alternatives that identify and describe the purpose of the non-text content are provided, and alternative forms of CAPTCHA using output modes for different types of sensory perception are provided to accommodate different disabilities.</li>
+<li>Decoration, Formatting, Invisible: If non-text content is pure decoration, is used only for visual formatting, or is not presented to users, then it is implemented in a way that it can be ignored by assistive technology</li>
+</ul>
+<h4>Steps to check</h4>
+<ul>
+<li>Turn on 'Display alt attribute' feature of Web Developer extension and check results</li>
+<li>Run an automated tool to identify issues and check through results</li>
+</ul>
+<p><strong>Impact range:</strong> Medium - High</p>
+<p><strong>Test type:</strong> Semi-automated</p>
+<p><strong>Tool</strong></p>
+<ul>
+<li><a href="https://chrispederick.com/work/web-developer/">Web Developer extension</a></li>
+<li><a href="https://www.paciellogroup.com/toolkit/">ARC Toolkit</a> (Images) - some issues with alt text such as missing alt attributes can be automated, but the appropriateness of text alternatives require manual review</li>
+</ul>
+<p><strong>WCAG Reference:</strong> <a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html">Understanding Success Criterion 1.1.1: Non-text Content</a></p>
+
+
+    </main>
+</div>
+
+    <footer>
+    </footer>
+
+  </body>
+</html>

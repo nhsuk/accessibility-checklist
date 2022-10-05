@@ -1,0 +1,162 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>The HTML structure and semantices reflects the intent - landmarks, headings, lists, data tables - Accessibility checklist </title>
+    <link rel="stylesheet" href="/accessibility-checklist/css/nhsuk-frontend.css">
+    <link rel="stylesheet" href="/accessibility-checklist/css/checklist.css">
+    <script src="/accessibility-checklist/js/scripts2.js" defer></script>
+  </head>
+  <body>
+
+  <header class="nhsuk-header" role="banner">
+    <div class="nhsuk-width-container-fluid nhsuk-header__container">
+      <div class="nhsuk-header__logo"><a class="nhsuk-header__link nhsuk-header__link--service" href="/accessibility-checklist/">
+          <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 16" height="40" width="100">
+            <path class="nhsuk-logo__background" fill="#005eb8" d="M0 0h40v16H0z"></path>
+            <path class="nhsuk-logo__text" fill="#fff" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"></path>
+          </svg>
+          <span class="nhsuk-header__service-name">
+            Accessibility checklist
+        </span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+<div class="nhsuk-width-container-fluid">
+    <main class="nhsuk-main-wrapper" id="maincontent">
+    
+    
+        
+    <div class="nhsuk-back-link">
+  <a class="nhsuk-back-link__link" href="/accessibility-checklist/">
+    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+      <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+    </svg>
+    Back to checklist</a>
+</div>
+<h1>The HTML structure and semantices reflects the intent - landmarks, headings, lists, data tables</h1>
+<h2>Design Notes</h2>
+<p>None</p>
+<h2>Developer Notes</h2>
+<h3>Ensure that HTML structure and semantics are implemented correctly</h3>
+<p>Ensure all information conveyed visually is also conveyed through code or available in text so that blind or partially sighted people can understand the relationships between different areas of content on the page.</p>
+<h4>Landmarks</h4>
+<p>Defining sections on the page with ARIA landmarks allows users of screen readers to easily skip from one section to another and understand where they currently are located on the page.</p>
+<h5>Key landmarks</h5>
+<ul>
+<li>banner: at the top of the page, usually contains the logo</li>
+<li>navigation: elements that link to other pages, usually in the banner</li>
+<li>search: the search field, usually in the banner</li>
+<li>main: contains the main content of the page. It should be unique on each page.</li>
+<li>contentinfo: the footer. This is shared across pages.</li>
+</ul>
+<p>You'll need to define headings, lists and data tables in content areas too.</p>
+<p><a href="https://webaim.org/techniques/aria/#landmarks">WebAIM Introduction to ARIA Landmarks</a></p>
+<h4>Headings</h4>
+<p>Properly structured headings help users to build a picture of content structure and hierarchy. Properly marked up headings help screen reader users in particular as they may choose to can navigate via page headings (skipping other content), making their journey more efficient.</p>
+<p><a href="https://www.nomensa.com/blog/2017/how-structure-headings-web-accessibility">Nomensa: How to Structure Headings for Web Accessibility</a></p>
+<h4>Lists</h4>
+<p>Using lists to group content on a page improves accessibility as assistive technologies often report the number of lists on a page as well as the number of items in a list. This helps people using these technologies to build up a mental picture of the page and its content.</p>
+<p><a href="https://webaim.org/techniques/semanticstructure/#lists">WebAIM: Semantic Structure - Lists</a></p>
+<h4>Tables</h4>
+<p>HTML Tables were not marked-up correctly, people using assistive technologies will not be able to understand the relationships in the table if the mark-up is incorrect.</p>
+<p>Further information: <a href="https://www.w3.org/WAI/tutorials/tables/">W3C: Tables</a></p>
+<h5>Table implementation</h5>
+<ul>
+<li>A visual header should be assigned using the <code>&lt;th&gt;</code> element</li>
+<li>Table data should be assigned using the <code>&lt;td&gt;</code> element
+Use the <code>&lt;caption&gt;</code> element to assign a caption. Table captions help users to determine the overall content of the table</li>
+<li>Table headers should not be left empty, users of assistive technology especially, would need to understand the relationships of data contained in the table.</li>
+</ul>
+<h2>Testing Notes</h2>
+<h3>Landmarks are used when possible</h3>
+<p>Key sections of the page have been defined using ARIA Landmarks</p>
+<h4>Key landmarks</h4>
+<ul>
+<li>banner: at the top of the page, usually contains the logo</li>
+<li>navigation: elements that link to other pages, usually in the banner</li>
+<li>search: the search field, usually in the banner</li>
+<li>main: contains the main content of the page. It should be unique on each page.</li>
+<li>contentinfo: the footer. This is shared across pages.</li>
+</ul>
+<h4>Steps to check:</h4>
+<ul>
+<li>Check results from automated tool such as <a href="https://www.paciellogroup.com/toolkit/">ARC Toolkit</a></li>
+</ul>
+<p><strong>Impact range:</strong> Medium - Low</p>
+<p><strong>Test type:</strong> Semi-automated</p>
+<p><strong>Tool:</strong></p>
+<ul>
+<li><a href="https://www.paciellogroup.com/toolkit/">ARC Toolkit</a> (Landmarks)</li>
+</ul>
+<p>WCAG Reference: <a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html">Understanding Success Criterion: 1.3.1: Info and Relationships</a></p>
+<h3>Headings are in sections and sub-sections</h3>
+<ul>
+<li>The order of heading levels is logical and helps users to understand the hierarchy and relationships in the page</li>
+<li>Text acting as and/or visually styled as a heading is marked up as such</li>
+</ul>
+<h4>Steps to check</h4>
+<ul>
+<li>Check results from automated test — for example using <a href="https://www.paciellogroup.com/toolkit/">ARC Toolkit</a></li>
+<li>Turn on 'Outline headings' option from Web Developer toolbar and manually confirm structure</li>
+</ul>
+<p><strong>Impact range:</strong> Medium</p>
+<p><strong>Test type:</strong> Semi-automated</p>
+<p><strong>Tool:</strong></p>
+<ul>
+<li><a href="https://www.paciellogroup.com/toolkit/">ARC Toolkit</a> (Headings)</li>
+<li><a href="https://chrispederick.com/work/web-developer/">Web Developer extension</a></li>
+</ul>
+<p>WCAG Reference: <a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html">Understanding Success Criterion: 1.3.1: Info and Relationships</a></p>
+<h3>Lists are used appropriately</h3>
+<p>Elements acting as and/or visually styled as lists and list items are marked up as such</p>
+<p>Unordered lists, i.e. denoted with bullets or non numerical symbols, are marked up with <code>&lt;ul&gt;</code> tag</p>
+<p>Ordered lists, i.e. denoted by numerical characters and items of which follow a sequential order, are marked up with <code>&lt;ol&gt;</code> tag</p>
+<h4>Steps to check</h4>
+<ul>
+<li>Check results from automated test — for example using <a href="https://www.paciellogroup.com/toolkit/">ARC Toolkit</a></li>
+<li>If familiar with Chrome Developer Tools (Firefox will be similar), inspect element and review the mark-up in the DOM</li>
+</ul>
+<p><strong>Impact range:</strong> Medium - Low</p>
+<p><strong>Test type:</strong> Semi-automated</p>
+<p><strong>Tool:</strong></p>
+<ul>
+<li><a href="https://www.paciellogroup.com/toolkit/">ARC Toolkit</a> (Lists)</li>
+<li><a href="https://chrispederick.com/work/web-developer/">Web Developer extension</a></li>
+</ul>
+<p>WCAG Reference: <a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html">Understanding Success Criterion: 1.3.1: Info and Relationships</a></p>
+<h3>Data tables are used appropriately</h3>
+<p>Content acting as tabular data is marked up as such.</p>
+<ul>
+<li>A visual header should be assigned using the <code>&lt;th&gt;</code> element.</li>
+<li>Table data should be assigned using the <code>&lt;td&gt;</code> element.</li>
+<li>Use the <code>&lt;caption&gt;</code> element to assign a caption. Table captions help users to determine the overall content of the table.</li>
+<li>Table headers should not be left empty, users of assistive technology especially, would need to understand the relationships of data contained in the table</li>
+</ul>
+<h4>Steps to check</h4>
+<ul>
+<li>Check results from automated test — for example using <a href="https://www.paciellogroup.com/toolkit/">ARC Toolkit</a></li>
+<li>If familiar with Chrome Developer Tools (Firefox will be similar), inspect element and review the mark-up in the DOM</li>
+</ul>
+<p><strong>Impact range:</strong> Medium</p>
+<p><strong>Test type:</strong> Semi-automated</p>
+<p><strong>Tool:</strong></p>
+<ul>
+<li><a href="https://www.paciellogroup.com/toolkit/">ARC Toolkit</a> (Tables)</li>
+<li><a href="https://chrispederick.com/work/web-developer/">Web Developer extension</a></li>
+</ul>
+<p><strong>WCAG Reference:</strong> <a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html">Understanding Success Criterion: 1.3.1: Info and Relationships</a></p>
+
+
+    </main>
+</div>
+
+    <footer>
+    </footer>
+
+  </body>
+</html>

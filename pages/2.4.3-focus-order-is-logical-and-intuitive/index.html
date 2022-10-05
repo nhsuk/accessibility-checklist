@@ -1,0 +1,96 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>The focus order is logical and intuitive - Accessibility checklist </title>
+    <link rel="stylesheet" href="/accessibility-checklist/css/nhsuk-frontend.css">
+    <link rel="stylesheet" href="/accessibility-checklist/css/checklist.css">
+    <script src="/accessibility-checklist/js/scripts2.js" defer></script>
+  </head>
+  <body>
+
+  <header class="nhsuk-header" role="banner">
+    <div class="nhsuk-width-container-fluid nhsuk-header__container">
+      <div class="nhsuk-header__logo"><a class="nhsuk-header__link nhsuk-header__link--service" href="/accessibility-checklist/">
+          <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 16" height="40" width="100">
+            <path class="nhsuk-logo__background" fill="#005eb8" d="M0 0h40v16H0z"></path>
+            <path class="nhsuk-logo__text" fill="#fff" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"></path>
+          </svg>
+          <span class="nhsuk-header__service-name">
+            Accessibility checklist
+        </span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+<div class="nhsuk-width-container-fluid">
+    <main class="nhsuk-main-wrapper" id="maincontent">
+    
+    
+        
+    <div class="nhsuk-back-link">
+  <a class="nhsuk-back-link__link" href="/accessibility-checklist/">
+    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+      <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+    </svg>
+    Back to checklist</a>
+</div>
+<h1>The focus order is logical and intuitive</h1>
+<h2>Design Notes</h2>
+<h3>Design an intuitive keyboard interaction</h3>
+<p>When people read through a page using a keyboard, the page content should be displayed in an order which makes sense. Make sure that interactive controls such as: links, buttons and form controls are designed so they receive focus in logical order.</p>
+<p>Generally speaking, items should receive focus in a left-right, top-bottom order, across screens and devices. When dynamic content appears on the page focus either needs to move to the new content (such as a modal dialog or an error summary) or the new content should be announced (such a single error message or toast) or information about the new content should be announced (such as autocomplete and search results).</p>
+<p>Designers and developers should collaborate to ensure coded pages produce an intuitive focus order.</p>
+<h2>Developer Notes</h2>
+<h3>Ensure the focus order makes sense</h3>
+<p>Make sure that interactive controls such as: links, buttons and form controls receive focus in logical order. Ensure:</p>
+<ul>
+<li><strong>the visual order for tabbing progress is left-to-right and top-to-bottom</strong> - interactive controls should be in a logical in the source code and not use a positive tabindex</li>
+<li><strong>the focus does not move to hidden elements</strong> - either make the hidden element appear when it receives focus (such as a skip link) or ensure that the element does not receive focus by using either <code>display:none</code> or the <code>hidden</code> attribute</li>
+<li><strong>you cannot tab to non-functional elements (such as headings, paragraphs and table cells) -</strong> do not add <code>tabindex=&quot;0&quot;</code> to elements that should not be interactive</li>
+</ul>
+<p>When there is a form error on a page move focus either to an error summary at the top of the page (which links to the fields that are in error) or move focus directly to the first field that has an error</p>
+<p>When providing dynamic content in modal dialogs ensure that keyboard focus moves to the dialog by using <code>HTMLElement.focus()</code> and return the focus to the triggering element when the dialog is closed.</p>
+<p>When building a single page application and activating a link change the pages content, ensure that focus does not remain on the link, but instead moves to the new page content.</p>
+<p>When new content is loaded above a button ensure that focus is moved to that content automatically.</p>
+<h4>More information</h4>
+<ul>
+<li><a href="https://developers.google.com/web/fundamentals/accessibility/focus">Introduction to Focus</a></li>
+<li><a href="https://developers.google.com/web/fundamentals/accessibility/focus/dom-order-matters">DOM Order Matters</a></li>
+<li><a href="https://developers.google.com/web/fundamentals/accessibility/focus/using-tabindex">Using tabindex</a></li>
+<li><a href="https://accessible-app.com/pattern/vue/routing">An accessible routing pattern</a></li>
+</ul>
+<h2>Testing Notes</h2>
+<h3>The sequence of content makes sense</h3>
+<p>Make sure that interactive controls such as: links, buttons and form controls receive focus in logical order.</p>
+<ul>
+<li>the visual order for tabbing progress is left-to-right and top-to-bottom</li>
+<li>the focus does not move to hidden elements</li>
+<li>you cannot tab to non-functional elements (such as headings, paragraphs and table cells)</li>
+</ul>
+<h4>Steps to check</h4>
+<ul>
+<li>place cursor in the browser address bar</li>
+<li>use the keyboard Tab key to progress through interactive page elements (e.g. links, buttons, form inputs) until you reach the end of the document</li>
+<li>does focus move from element to element in a logical and predictable order?</li>
+<li>repeat the process and activate interactive elements such as buttons and tabs that show and hide content (using Enter, Spacebar, or arrow keys as appropriate)</li>
+<li>when content is added or removed , navigate through the content</li>
+<li>does the focus order makes sense?</li>
+</ul>
+<p><strong>Impact range:</strong> Low - High</p>
+<p><strong>Test type:</strong> Manual (with some support from tools)</p>
+<p><strong>Tool:</strong> <a href="https://www.paciellogroup.com/toolkit/">ARC Toolkit</a> (Tab order, Show and track focus)</p>
+<p><strong>WCAG Reference:</strong> <a href="https://www.w3.org/WAI/WCAG21/Understanding/focus-order">Understanding Success Criterion 2.4.3 Focus Order</a></p>
+
+
+    </main>
+</div>
+
+    <footer>
+    </footer>
+
+  </body>
+</html>

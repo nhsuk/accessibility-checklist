@@ -1,0 +1,87 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>There is a mechanism to skip to content, or skip past navigation - Accessibility checklist </title>
+    <link rel="stylesheet" href="/accessibility-checklist/css/nhsuk-frontend.css">
+    <link rel="stylesheet" href="/accessibility-checklist/css/checklist.css">
+    <script src="/accessibility-checklist/js/scripts2.js" defer></script>
+  </head>
+  <body>
+
+  <header class="nhsuk-header" role="banner">
+    <div class="nhsuk-width-container-fluid nhsuk-header__container">
+      <div class="nhsuk-header__logo"><a class="nhsuk-header__link nhsuk-header__link--service" href="/accessibility-checklist/">
+          <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 16" height="40" width="100">
+            <path class="nhsuk-logo__background" fill="#005eb8" d="M0 0h40v16H0z"></path>
+            <path class="nhsuk-logo__text" fill="#fff" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"></path>
+          </svg>
+          <span class="nhsuk-header__service-name">
+            Accessibility checklist
+        </span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+<div class="nhsuk-width-container-fluid">
+    <main class="nhsuk-main-wrapper" id="maincontent">
+    
+    
+        
+    <div class="nhsuk-back-link">
+  <a class="nhsuk-back-link__link" href="/accessibility-checklist/">
+    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+      <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+    </svg>
+    Back to checklist</a>
+</div>
+<h1>There is a mechanism to skip to content, or skip past navigation</h1>
+<h2>Design Notes</h2>
+<h3>Define skip links and allow users to bypass large groups of controls</h3>
+<p>Where there are many links or form controls used in one group, it creates a lot of items to tab through. A link before such groups, which allows users to skip to the end, helps people using keyboard-style access with a switch or head-wand to avoid repetitive key presses.</p>
+<p>Generally, a skip link is required before the main header navigation links. Provide a style for the skip link to be used by developers. Skip links are generally hidden by default but must be very visible when focused.</p>
+<p><img src="/images/skip-to-main-content.png" alt=""></p>
+<p>Ensure any large blocks of links or controls (e.g. over 20 checkboxes in a filter) have a skip link included as part of designs or a way to show/hide the controls.</p>
+<h4>More information:</h4>
+<ul>
+<li>See the <a href="https://www.gov.uk/search/all?keywords=test&amp;order=relevance">GOV.UK search page</a> example which includes filters housed in collapsed accordion components and an option is provided to skip past entire filter section.</li>
+</ul>
+<h2>Developer Notes</h2>
+<h3>Ensure there is a working skip link to the main content</h3>
+<p>Sighted users can easily ignore repeated sections of content on a page — such as repeated links in the main navigation. However, without a method of bypassing these repeated blocks of links, users of assistive technology are forced to move through them. This can be a repetitive and frustrating experience. Skip links resolve this issue for users.</p>
+<p>Ensure you've been provided with design(s) for the skip link and check it meets minimum contrast ratios. If not, ask your designers.</p>
+<p>Generally skip links are implemented as same page links to an ID set on the <code>&lt;main&gt;</code> element, bypassing the main navigation and breadcrumb (where relevant).</p>
+<p>To ensure these work across browsers, tabindex=&quot;-1&quot; should also be set on <code>&lt;main&gt;</code> element (or other target element in the body content).</p>
+<p>A different approach is required for JavaScript-driven, client rendered websites such as single page apps (SPAs). In this case, focus needs to be managed manually — for example, main body content elements (h1) are made programatically focusable using tabindex=&quot;-1&quot; and focus moved to the element using the JavaScript focus() method.</p>
+<h4>Information and tools</h4>
+<ul>
+<li><a href="https://webaim.org/techniques/skipnav/">WebAIM: Skip Links</a></li>
+<li><a href="https://daverupert.com/2019/01/accessible-page-navigations-in-single-page-apps/">Dave Rupert: Accessible Navigation in SPAs</a></li>
+</ul>
+<h2>Testing Notes</h2>
+<h3>There is a mechanism to skip to content, or skip past navigation</h3>
+<p>Skip links are used so people can avoid long lists of links/controls</p>
+<p>Steps to check:</p>
+<ul>
+<li>place cursor in the browser address bar</li>
+<li>press Tab key, a 'Skip to content' link should become visible before focus reaches the main navigation links</li>
+<li>press Enter key while skip link has focus</li>
+<li>check focus has moved to past main navigation to main body content</li>
+<li>check additional press of Tab continues to next interactive element in main body</li>
+</ul>
+<p><strong>Impact range:</strong> Medium - Low</p>
+<p><strong>Test type:</strong> Manual</p>
+<p><strong>WCAG Reference:</strong> <a href="https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks">Understanding Success Criterion 2.4.1: Bypass Blocks</a></p>
+
+
+    </main>
+</div>
+
+    <footer>
+    </footer>
+
+  </body>
+</html>

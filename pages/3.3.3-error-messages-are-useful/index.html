@@ -1,0 +1,81 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Error messages are actually useful, e.g. provide a useful next step or way of entering valid data - Accessibility checklist </title>
+    <link rel="stylesheet" href="/accessibility-checklist/css/nhsuk-frontend.css">
+    <link rel="stylesheet" href="/accessibility-checklist/css/checklist.css">
+    <script src="/accessibility-checklist/js/scripts2.js" defer></script>
+  </head>
+  <body>
+
+  <header class="nhsuk-header" role="banner">
+    <div class="nhsuk-width-container-fluid nhsuk-header__container">
+      <div class="nhsuk-header__logo"><a class="nhsuk-header__link nhsuk-header__link--service" href="/accessibility-checklist/">
+          <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 16" height="40" width="100">
+            <path class="nhsuk-logo__background" fill="#005eb8" d="M0 0h40v16H0z"></path>
+            <path class="nhsuk-logo__text" fill="#fff" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"></path>
+          </svg>
+          <span class="nhsuk-header__service-name">
+            Accessibility checklist
+        </span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+<div class="nhsuk-width-container-fluid">
+    <main class="nhsuk-main-wrapper" id="maincontent">
+    
+    
+        
+    <div class="nhsuk-back-link">
+  <a class="nhsuk-back-link__link" href="/accessibility-checklist/">
+    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+      <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+    </svg>
+    Back to checklist</a>
+</div>
+<h1>Error messages are actually useful, e.g. provide a useful next step or way of entering valid data</h1>
+<p>If an input error is automatically detected, suggestions to recitfy the issue are provided to the user.</p>
+<h2>Design and Developer Notes</h2>
+<h3>Ensure error messages are useful</h3>
+<p>When someone makes an error while filling in a form, provide suggestions on how to correct it.</p>
+<p>When an error is automatically detected, provide suggestions for how to recover – unless doing that would compromise security (like giving password hints, for example).</p>
+<p>Complementing text with icons can also help users quickly scanning forms and those with cognitive or learning difficulties.</p>
+<p>Appropriate error suggestions include:</p>
+<ul>
+<li>Indicating a required field has been left blank</li>
+<li>Indicating the required format for the field in error</li>
+<li>Indicating a range of valid values for the field in error</li>
+</ul>
+<h4>Related</h4>
+<ul>
+<li><a href="https://design-system.service.gov.uk/components/error-message/">https://design-system.service.gov.uk/components/error-message/</a> — From the 'Clear and concise' heading onwards, in particular</li>
+</ul>
+<h2>Testing Notes</h2>
+<h3>Error messages are actually useful, e.g. provide a useful next step or way of entering valid data</h3>
+<p>If an input error is automatically detected and suggestions for correction are known, then the suggestions are provided to the user, unless it would jeopardise the security or purpose of the content</p>
+<p>For example: An input field requires that a month name be entered. If the user enters &quot;12,&quot; suggestions for correction may be a description of the set of values, e.g.:</p>
+<p>&quot;Please provide the name of the month.&quot; The conversion of the input data interpreted as a different month format, e.g., &quot;Do you mean 'December'?&quot;</p>
+<h4>Steps to check</h4>
+<ul>
+<li>Open page with a form</li>
+<li>Intentionally leave all fields blank and submit</li>
+<li>Check content of resulting error messages</li>
+</ul>
+<p><strong>Impact range:</strong> Medium</p>
+<p><strong>Test type:</strong> Manual</p>
+<p><strong>WCAG Reference:</strong> <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-suggestions.html">Understanding Success Criterion 3.3.3 Error suggestion</a></p>
+
+
+    </main>
+</div>
+
+    <footer>
+    </footer>
+
+  </body>
+</html>

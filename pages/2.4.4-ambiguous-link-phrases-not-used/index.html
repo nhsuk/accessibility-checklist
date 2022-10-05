@@ -1,0 +1,76 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Ambiguous lonk phrases have not been used. The purpose of the link can be determined from the link text alone or it has been programmatically defined. - Accessibility checklist </title>
+    <link rel="stylesheet" href="/accessibility-checklist/css/nhsuk-frontend.css">
+    <link rel="stylesheet" href="/accessibility-checklist/css/checklist.css">
+    <script src="/accessibility-checklist/js/scripts2.js" defer></script>
+  </head>
+  <body>
+
+  <header class="nhsuk-header" role="banner">
+    <div class="nhsuk-width-container-fluid nhsuk-header__container">
+      <div class="nhsuk-header__logo"><a class="nhsuk-header__link nhsuk-header__link--service" href="/accessibility-checklist/">
+          <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 16" height="40" width="100">
+            <path class="nhsuk-logo__background" fill="#005eb8" d="M0 0h40v16H0z"></path>
+            <path class="nhsuk-logo__text" fill="#fff" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"></path>
+          </svg>
+          <span class="nhsuk-header__service-name">
+            Accessibility checklist
+        </span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+<div class="nhsuk-width-container-fluid">
+    <main class="nhsuk-main-wrapper" id="maincontent">
+    
+    
+        
+    <div class="nhsuk-back-link">
+  <a class="nhsuk-back-link__link" href="/accessibility-checklist/">
+    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+      <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+    </svg>
+    Back to checklist</a>
+</div>
+<h1>Ambiguous lonk phrases have not been used. The purpose of the link can be determined from the link text alone or it has been programmatically defined.</h1>
+<h2>Design Notes</h2>
+<h3>Provide descriptive text for links and buttons</h3>
+<p>Links needs to make sense out of context as some people experience them that way, so each link on a page should clearly describe where it will take you if you choose to follow it.</p>
+<p>Ideally link text should match the heading of the target page. So if the target page of the link has a heading 'Services and Partners', that would make good link text.</p>
+<p>Avoid ambiguous phrases such as “click here”, “read more” and “find out more”.</p>
+<p>If links open in a new window this information should be included in the link phrase (e.g. “Link name (opens in new window)”).</p>
+<p>If a link contains a document, ensure the type and size of file is also included in the link phrase (e.g. “Link name (PDF, 200k)”).</p>
+<h2>Developer Notes</h2>
+<h3>Ensure that the purpose of links and buttons is available</h3>
+<p>Clear and concise link and button phrases help people understand what will happen when they interact with that element.</p>
+<p>Link phrases should be clear enough to make sense on their own without requiring additional context.</p>
+<p>Each link on a page should clearly describe where it will take you (or what will happen, in the case of downloadable files) if you interact with it.</p>
+<h4>Link and button phrases details</h4>
+<ul>
+<li>If links open in a new window, users should be informed of this.</li>
+<li>If a link contains a document ensure users are aware of this (type and size of file).</li>
+<li>CSS can be used to hide text to hide a portion of the link text to provide more information to users of screen readers.</li>
+<li>Assigning aria-describedby and an ID can be used to associate text that is already present on the page with the link.</li>
+</ul>
+<h2>Testing Notes</h2>
+<h3>You can tell where a link takes you</h3>
+<p>The purpose of each link can be determined from the link text alone or from the link text together with its programmatically determined link context, except where the purpose of the link would be ambiguous to users in general.</p>
+<p><strong>Impact range:</strong> Medium - High</p>
+<p><strong>Test type:</strong> Semi-automated</p>
+<p><strong>Tool:</strong> <a href="https://www.paciellogroup.com/toolkit/">ARC Toolkit</a> (Links)</p>
+
+
+    </main>
+</div>
+
+    <footer>
+    </footer>
+
+  </body>
+</html>

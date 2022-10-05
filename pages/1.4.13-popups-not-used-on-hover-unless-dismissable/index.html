@@ -1,0 +1,84 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Pop-ups are not used on hover, unless they are dismissable and robust - Accessibility checklist </title>
+    <link rel="stylesheet" href="/accessibility-checklist/css/nhsuk-frontend.css">
+    <link rel="stylesheet" href="/accessibility-checklist/css/checklist.css">
+    <script src="/accessibility-checklist/js/scripts2.js" defer></script>
+  </head>
+  <body>
+
+  <header class="nhsuk-header" role="banner">
+    <div class="nhsuk-width-container-fluid nhsuk-header__container">
+      <div class="nhsuk-header__logo"><a class="nhsuk-header__link nhsuk-header__link--service" href="/accessibility-checklist/">
+          <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 16" height="40" width="100">
+            <path class="nhsuk-logo__background" fill="#005eb8" d="M0 0h40v16H0z"></path>
+            <path class="nhsuk-logo__text" fill="#fff" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"></path>
+          </svg>
+          <span class="nhsuk-header__service-name">
+            Accessibility checklist
+        </span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+<div class="nhsuk-width-container-fluid">
+    <main class="nhsuk-main-wrapper" id="maincontent">
+    
+    
+        
+    <div class="nhsuk-back-link">
+  <a class="nhsuk-back-link__link" href="/accessibility-checklist/">
+    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+      <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+    </svg>
+    Back to checklist</a>
+</div>
+<h1>Pop-ups are not used on hover, unless they are dismissable and robust</h1>
+<h2>Design Notes</h2>
+<h3>Content on hover</h3>
+<p>Avoid including functionality which relies on mouse hover in designs — such as hiding content behind tooltips.</p>
+<p>The 'hover' interaction is not available for any user on a mobile device and can pose accessibility barriers for users. Key considerations include: if tooltip content is triggered on hover it must also be keyboard operable, the user must be able to dismiss content without moving their mouse or keyboard focus and the content must remain visible until user moves mouse or keyboard focus.</p>
+<p>Rather than hiding content behind tooltips, consider working with a content designer to see if text can be edited such that it can be included on screen. Or, if content must be hidden from view, generally, an expand and collapse accordion component will provide more accessible results.</p>
+<h4>More information</h4>
+<ul>
+<li><a href="https://sarahmhigley.com/writing/tooltips-in-wcag-21">https://sarahmhigley.com/writing/tooltips-in-wcag-21</a></li>
+</ul>
+<h2>Developer Notes</h2>
+<h3>Ensure that overlays that appear on hover are dismissible and robust</h3>
+<p>Additional content should not interfere with viewing or operating original content on the page.</p>
+<p>Where additional content that appears and disappears when activated via pointer hover or keyboard, the interaction should be designed so users can perceive the additional content and dismiss it without disrupting their current page journey.</p>
+<p>If hovering the mouse over an element triggers additional content to appear (like in pops-ups or tooltips), make sure that:</p>
+<ul>
+<li>The additional content can be dismissed without moving your mouse  — i.e. using the ESC key</li>
+<li>If the user needs to hover or interact with the extra content, then the mouse cursor can move to it and use it, without it disappearing</li>
+<li>The content stays visible until mouse is removed, the user dismisses it, or it's no longer useful.</li>
+</ul>
+<h2>Testing Notes</h2>
+<h3>Pop-ups are not used on-hover or on-focus, unless they are dismissible and robust</h3>
+<p>Where receiving and then removing pointer hover or keyboard focus triggers
+additional content to become visible and then hidden, the following are true:</p>
+<ul>
+<li>Dismissible: A mechanism is available to dismiss the additional content without moving pointer hover or keyboard focus, unless the additional content communicates an input error or does not obscure or replace other content;</li>
+<li>Hoverable: If pointer hover can trigger the additional content, then the pointer can be moved over the additional content without the additional content disappearing;</li>
+<li>Persistent: The additional content remains visible until the hover or focus trigger is removed, the user dismisses it, or its information is no longer valid.</li>
+</ul>
+<p>Exception: The visual presentation of the additional content is controlled by the user agent and is not modified by the author.</p>
+<p><strong>Impact range: Medium - Low</strong></p>
+<p><strong>Test type: Manual</strong></p>
+<p><strong>Demo:</strong> <a href="https://codepen.io/heydon/pen/Vzwdpy">Inclusive Components: Tooltips and Toggletips</a></p>
+<p><strong>WCAG Reference:</strong> <a href="https://www.w3.org/WAI/WCAG21/Understanding/content-on-hover-or-focus">Understanding Success Criterion 1.4.13 Content on Hover or Focus</a></p>
+
+
+    </main>
+</div>
+
+    <footer>
+    </footer>
+
+  </body>
+</html>

@@ -1,0 +1,103 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>There is decent contrast for graphics (that don't have text) and inputs/controls/focus styles - Accessibility checklist </title>
+    <link rel="stylesheet" href="/accessibility-checklist/css/nhsuk-frontend.css">
+    <link rel="stylesheet" href="/accessibility-checklist/css/checklist.css">
+    <script src="/accessibility-checklist/js/scripts2.js" defer></script>
+  </head>
+  <body>
+
+  <header class="nhsuk-header" role="banner">
+    <div class="nhsuk-width-container-fluid nhsuk-header__container">
+      <div class="nhsuk-header__logo"><a class="nhsuk-header__link nhsuk-header__link--service" href="/accessibility-checklist/">
+          <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 16" height="40" width="100">
+            <path class="nhsuk-logo__background" fill="#005eb8" d="M0 0h40v16H0z"></path>
+            <path class="nhsuk-logo__text" fill="#fff" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"></path>
+          </svg>
+          <span class="nhsuk-header__service-name">
+            Accessibility checklist
+        </span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+<div class="nhsuk-width-container-fluid">
+    <main class="nhsuk-main-wrapper" id="maincontent">
+    
+    
+        
+    <div class="nhsuk-back-link">
+  <a class="nhsuk-back-link__link" href="/accessibility-checklist/">
+    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+      <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+    </svg>
+    Back to checklist</a>
+</div>
+<h1>There is decent contrast for graphics (that don't have text) and inputs/controls/focus styles</h1>
+<h2>Design Notes</h2>
+<h3>Ensure interface components and meaningful graphics have sufficient contrast</h3>
+<p>Active user interface components (e.g. text inputs and radio buttons) and meaningful non text graphics should be distinguishable by people with visual impairments.</p>
+<p>Inactive components are exempt from this requirement (e.g. disabled buttons), but if it is possible to ensure these elements have sufficient contrast without confusing users, this will help people with low vision.</p>
+<p>Identify the element(s) that convey the meaning of the graphic or component. Use a tool which calculates the ratio between adjacent colours to that graphical element.</p>
+<p>The minimum contrast ratio for <strong>interface components and meaningful graphics is 3:1</strong>.</p>
+<h4>More information</h4>
+<ul>
+<li>For full details, see: <a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html">Understanding Non-Text Contrast</a></li>
+<li><a href="https://developer.paciellogroup.com/resources/contrastanalyser/">Tool: Colour contrast checker</a> - refer to the results for ‘non-text contrast’ or 'graphical objects and user interface components' rather than for text.</li>
+</ul>
+<h3>Ensure focus styles can be seen</h3>
+<p>Where colour is relied upon to indicate focus, the focus colour must have a <strong>minimum 3:1 contrast ratio</strong> with the adjacent colours.</p>
+<p>The best way to ensure accessible focus indicators is to not to rely on a colour change alone but to combine with another visual change which doesn't require colour vision — such as a border thickness change, too.</p>
+<img class="nhsuk-card__img" src="/images/focus-state.png" alt="">
+<p>Example focus state which works in a variety of contexts through the use of colour and border thickness changes.</p>
+<h4>More information</h4>
+<ul>
+<li><a href="https://design-system.service.gov.uk/get-started/focus-states/">GOV.UK Focus States</a></li>
+</ul>
+<h3>Ensure link text meets contrast requirements</h3>
+<ul>
+<li>If colour alone is used to communicate text is a link, ensure the contrast ratio between the link and surrounding text <strong>is at least 3:1.</strong> Plus, make sure the appearance of the link changes — such as becoming underlined — when it receives keyboard focus (or mouse hover)</li>
+<li>The simplest way to meet the contrast requirement is to ensure all body links are underlined</li>
+</ul>
+<p>Note: this doesn't apply to elements in repeated navigation such as header or footer as it is clear from the context these elements are links</p>
+<h4>More information</h4>
+<ul>
+<li><a href="https://webaim.org/resources/linkcontrastchecker/">Tool: Link Contrast Checker</a></li>
+</ul>
+<h2>Developer Notes</h2>
+<h3>Ensure colour contrast requirements are met</h3>
+<p>Before implementing a design ensure that it meets colour contrast requirements.</p>
+<h4>Non-Text Contrast</h4>
+<p>Active user interface components and meaningful non text graphics should be distinguishable by people with visual impairments.</p>
+<ul>
+<li>The minimum contrast for such components is <strong>3:1</strong>.</li>
+</ul>
+<h4>Information and tools</h4>
+<ul>
+<li><a href="https://developer.paciellogroup.com/resources/contrastanalyser/">Tool: Colour Contrast Analyser</a></li>
+</ul>
+<h2>Testing Notes</h2>
+<h3>There is decent contrast for graphics (that don't have text) and inputs/controls/focus styles</h3>
+<p>The visual presentation of the following have a contrast ratio of at least 3:1 against adjacent colour(s):</p>
+<ul>
+<li>User Interface Components: Visual information required to identify user interface components and states, except for inactive components or where the appearance of the component is determined by the user agent and not modified by the author;</li>
+<li>Graphical Objects: Parts of graphics required to understand the content, except when a particular presentation of graphics is essential to the information being conveyed.</li>
+</ul>
+<p><strong>Impact range:</strong> Medium - Low</p>
+<p><strong>Test type:</strong> Manual</p>
+<p><strong>WCAG Reference:</strong> <a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html">Understanding Success Criterion 1.4.11: Non-text Contrast</a></p>
+
+
+    </main>
+</div>
+
+    <footer>
+    </footer>
+
+  </body>
+</html>
