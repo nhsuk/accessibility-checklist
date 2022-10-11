@@ -20,15 +20,11 @@ title: Accessibility checklist
       <th role="columnheader" scope="col" class="sortable-col">Knowledge to test</th>
       <th role="columnheader" scope="col" class="sortable-col">Time to test</th>
       <th role="columnheader" scope="col">Test procedure</th>
-      <!-- <th role="columnheader" scope="col">Understanding success criteria</th> -->
     </tr>
   </thead>
 
   <tbody class="nhsuk-table__body">
-
   {%- for pages in collections.pages -%}
-  {# Use tags to do filtering {%- for pages in collections.Developer -%} #}
-  {# Use front matter value to filter {%- if pages.data.responsibility == "Designer" -%} for Designer only or {%- if "Designer" in pages.data.responsibility -%} if includes Designer (and others) #}
     <tr class="nhsuk-table__row">
       <td class="nhsuk-table__cell">
         <span class="nhsuk-table-responsive__heading">Interaction </span>
@@ -36,9 +32,6 @@ title: Accessibility checklist
           {{ pages.data.interaction | join(",  ") | safe  }}
         {%- endif %}
       </td>
-      
-      
-      
       <td class="nhsuk-table__cell">
         <span class="nhsuk-table-responsive__heading">Success criteria </span>
         {%- if pages.data.understandingScURL -%}
@@ -47,8 +40,6 @@ title: Accessibility checklist
           {{ pages.data.successCriteria }}
         {%- endif %}
       </td>
-      
-      
       <td class="nhsuk-table__cell">
         <span class="nhsuk-table-responsive__heading">Level </span>{{ pages.data.conformanceLevel }}
       </td>
@@ -85,12 +76,6 @@ title: Accessibility checklist
           {{ pages.data.testProcedure | join(",<br> ") | safe }}
         {%- endif %}
       </td>
-      <!-- <td class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Understanding success criteria </span>
-        {%- if pages.data.understandingScURL -%}
-          <a href="{{ pages.data.understandingScURL }}">{{ pages.data.understandingScURL }}</a>
-        {%- endif %}
-      </td> -->
     </tr>
   {%- endfor -%}
   </tbody>
