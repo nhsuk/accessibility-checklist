@@ -7,10 +7,10 @@
     "start": "eleventy --serve",
     "build": "eleventy --pathprefix 'accessibility-checklist'",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "npx stylelint 'src/css/checklist.css' && npx htmlhint 'public/**/*.html'",
+    "lint": "npx stylelint 'src/css/checklist.css' && npx htmlhint 'public/**/*.html' && npx eslint 'src/js/*.js'",
     "lint:css": "npx stylelint 'src/css/checklist.css'",
     "lint:html": "npx htmlhint 'public/**/*.html'",
-    "lint:js": "npx eslint 'src/js/scripts.js'"
+    "lint:js": "npx eslint 'src/js/*.js'"
   },
   "repository": {
     "type": "git",
