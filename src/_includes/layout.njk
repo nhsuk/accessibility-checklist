@@ -7,7 +7,7 @@ site_title: Accessibility checklist
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>{{ title | safe }} - {{ site_title }} </title>
+    <title>{{ title | safe }} - NHS</title>
     <link rel="stylesheet" href="{{ '/css/nhsuk-frontend.css' | url }}">
     <link rel="stylesheet" href="{{ '/css/checklist.css' | url }}">
     <script src="{{ '/js/scripts.js' | url }}" defer></script>
@@ -31,17 +31,6 @@ site_title: Accessibility checklist
 
 <div class="nhsuk-width-container-fluid">
     <main class="nhsuk-main-wrapper" id="maincontent">
-    
-    {# <h1>{{ site_title }}</h1>
-
-    {% if sometags %}
-
-      {{ sometags | join(", ") }}
-
-    {% endif %}
-
-    <br><br> #}
-        
     {{ content | safe }}
     </main>
 </div>

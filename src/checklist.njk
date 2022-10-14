@@ -1,0 +1,92 @@
+---
+layout: layout.njk
+title: Accessibility checklist and guidance
+header: Accessibility checklist and guidance
+---
+
+<div class="nhsuk-back-link">
+  <a class="nhsuk-back-link__link" href="{{ '/' | url }}">
+    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+      <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+    </svg>
+    Back</a>
+</div>
+
+<h1>{{ header }}</h1>
+
+<table class="sortable show-unsorted-icon nhsuk-table-responsive">
+  
+  <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Accessibility checklist and guidance, column headers with buttons are sortable</caption>
+  
+  <thead role="rowgroup" class="nhsuk-table__head">
+    <tr role="row">
+      <th role="columnheader" scope="col" class="sortable-col">Success criteria</th>
+      <th role="columnheader" scope="col" class="sortable-col">Level</th>
+      <th role="columnheader" scope="col">Description</th>
+      <th role="columnheader" scope="col" class="sortable-col">Interaction</th>
+      <th role="columnheader" scope="col" class="sortable-col">Severity</th>
+      <th role="columnheader" scope="col" class="sortable-col">Responsibility</th>
+      <th role="columnheader" scope="col" class="sortable-col">Knowledge to test</th>
+      <th role="columnheader" scope="col" class="sortable-col">Time to test</th>
+      <th role="columnheader" scope="col">Test procedure</th>
+    </tr>
+  </thead>
+
+  <tbody class="nhsuk-table__body">
+  {%- for pages in collections.pages -%}
+    <tr class="nhsuk-table__row">
+      <td class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Success criteria </span>
+        {%- if pages.data.understandingScURL -%}
+          <a href="{{ pages.data.understandingScURL }}">{{ pages.data.successCriteria }}</a>
+        {%- else %}
+          {{ pages.data.successCriteria }}
+        {%- endif %}
+      </td>
+      <td class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Level </span>{{ pages.data.conformanceLevel }}
+      </td>
+      <td class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Description </span>
+        {%- if (pages.url) and (pages.data.description) -%}
+          <a href="{{ pages.url | url }}">{{ pages.data.description }}</a>
+        {%- endif %}
+      </td>
+      <td class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Interaction </span>
+        {%- if pages.data.interaction -%}
+          {{ pages.data.interaction | join(",  ") | safe  }}
+        {%- endif %}
+      </td>
+      <td class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Severity </span>
+        {%- if pages.data.severity -%}
+          {{ pages.data.severity | join(",  ") | safe }}
+        {%- endif %}
+      </td>
+      <td class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Responsibility </span>
+        {%- if pages.data.responsibility -%}
+          {{ pages.data.responsibility | join(",<br> ") | safe }}
+        {%- endif %}
+      </td>
+      <td class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Knowledge to test </span>{{ pages.data.knowledgeToTest }}
+      </td>
+      <td class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Time to test </span>
+        {%- if pages.data.timeToTest -%}
+          {{ pages.data.timeToTest | join(",<br> ") | safe }}
+        {%- endif %}
+      </td>
+      <td class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Test procedure </span>
+        {%- if pages.data.testProcedure -%}
+          {{ pages.data.testProcedure | join(",<br> ") | safe }}
+        {%- endif %}
+      </td>
+    </tr>
+  {%- endfor -%}
+  </tbody>
+
+</table>

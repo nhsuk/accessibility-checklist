@@ -1,83 +1,83 @@
 ---
 layout: layout.njk
 title: Accessibility checklist
+header: Accessibility checklist
 ---
 
-<h1>{{ title }}</h1>
+<h1>{{ header }}</h1>
 
-<table class="sortable show-unsorted-icon nhsuk-table-responsive">
-  
-  <caption class="nhsuk-table__caption">Accessibility checklist<span class="nhsuk-u-visually-hidden">, column headers with buttons are sortable</span></caption>
-  
-  <thead role="rowgroup" class="nhsuk-table__head">
-    <tr role="row">
-      <th role="columnheader" scope="col" class="sortable-col">Interaction</th>
-      <th role="columnheader" scope="col" class="sortable-col">Success criteria</th>
-      <th role="columnheader" scope="col" class="sortable-col">Level</th>
-      <th role="columnheader" scope="col">Description</th>
-      <th role="columnheader" scope="col" class="sortable-col">Severity</th>
-      <th role="columnheader" scope="col" class="sortable-col">Responsibility</th>
-      <th role="columnheader" scope="col" class="sortable-col">Knowledge to test</th>
-      <th role="columnheader" scope="col" class="sortable-col">Time to test</th>
-      <th role="columnheader" scope="col">Test procedure</th>
-    </tr>
-  </thead>
+<!-- <p>The following can be used to help check for the accessibility of your web product or service.</p>
+<p>It is based on the <a href="https://www.w3.org/TR/WCAG21/">W3C's Web Content Accessibility Guidelines (WCAG) 2.1</a> and provides guidance on the success criteria for each guideline.</p>
+-->
 
-  <tbody class="nhsuk-table__body">
-  {%- for pages in collections.pages -%}
-    <tr class="nhsuk-table__row">
-      <td class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Interaction </span>
-        {%- if pages.data.interaction -%}
-          {{ pages.data.interaction | join(",  ") | safe  }}
-        {%- endif %}
-      </td>
-      <td class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Success criteria </span>
-        {%- if pages.data.understandingScURL -%}
-          <a href="{{ pages.data.understandingScURL }}">{{ pages.data.successCriteria }}</a>
-        {%- else %}
-          {{ pages.data.successCriteria }}
-        {%- endif %}
-      </td>
-      <td class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Level </span>{{ pages.data.conformanceLevel }}
-      </td>
-      <td class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Description </span>
-        {%- if (pages.url) and (pages.data.description) -%}
-          <a href="{{ pages.url | url }}">{{ pages.data.description }}</a>
-        {%- endif %}
-      </td>
-      <td class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Severity </span>
-        {%- if pages.data.severity -%}
-          {{ pages.data.severity | join(",  ") | safe }}
-        {%- endif %}
-      </td>
-      <td class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Responsibility </span>
-        {%- if pages.data.responsibility -%}
-          {{ pages.data.responsibility | join(",<br> ") | safe }}
-        {%- endif %}
-      </td>
-      <td class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Knowledge to test </span>{{ pages.data.knowledgeToTest }}
-      </td>
-      <td class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Time to test </span>
-        {%- if pages.data.timeToTest -%}
-          {{ pages.data.timeToTest | join(",<br> ") | safe }}
-        {%- endif %}
-      </td>
-      <td class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Test procedure </span>
-        {%- if pages.data.testProcedure -%}
-          {{ pages.data.testProcedure | join(",<br> ") | safe }}
-        {%- endif %}
-      </td>
-    </tr>
-  {%- endfor -%}
-  </tbody>
+<h2>Introduction</h2>
 
-</table>
+<p>The accessibility checklist helps those involved in creating websites and mobile apps more accessible.</p> 
+
+<p>It is based on the <a href="https://www.w3.org/TR/WCAG21/">W3C's Web Content Accessibility Guidelines (WCAG) 2.1</a>.</p>
+
+<p>These guidelines explain how to make web content more accessible to people with disabilities and they are an international standard.</p>
+
+<p>Each guideline has at least one one success criterion. These are specific, testable rules and if these rules are met, then the guideline will have been met. 
+  That portion of the web content that the success criterion refers to will therefore be deemed accessible to people with disabilities.</p>
+
+<p>Each success criterion is designated as either Level A, Level AA, or Level AAA of conformance.</p>
+
+<ul>
+  <li>Level A refers to the lowest (minimal) level of conformance. This is a basic requirement for some users with disabilities to be able to access and use web content</li>
+  <li>Level AA includes all Level A and Level AA requirements. This level indicates overall accessbility and removal of significant barriers to accessing and using web content</li>
+  <li>Level AAA includes all Level A, AA and AAA requirements and is the highest (maximum) level of conformance. This level provides improvements and enhancements to web accessibility.</li>
+</ul>
+
+<p>The NHS is legally required to meet, at a minimum, Level AA conformance for their websites and public mobile apps.</p>
+
+
+<h2>How the accessibility checklist helps</h2>
+
+<p>The accessibility checklist contains information and guidance to try and simplify WCAG 2.1 to make it easier to implement accessible websites and public mobile apps.</p>
+
+<p>It contains a list of all the Level A and Level AA success criteria that NHS websites and public mobile apps need to conform to. 
+  It also contains some Level AAA success criteria and best practices that should be considered to further improve accessibility.</p>
+
+<p>There is also information about:</p>
+
+<ul>
+  <li>what interaction is affected for each success criteria, such as:
+    <ul class="nhsuk-u-margin-top-2">
+      <li>screen reader users</li>
+      <li>users who magnify their display</li>
+      <li>keyboard only users</li>
+      <li>mobile device users</li>
+      <li>speech recognition users</li>
+      <li>users with cognitive impairments</li>
+      <li>users who are deaf or have impaired hearing</li>
+      <li>users with photosensitive seizure disorders</li>
+    </ul>
+  </li>
+  <li>the severity level for each success criteria, based on experience of how difficult a barrier would be to overcome in context:
+    <ul class="nhsuk-u-margin-top-2"> 
+      <li>minor, where not conforming to this may cause inconvenience but would not cause significant frustration</li>
+      <li>moderate, where there is moderate frustration if not fixed</li>
+      <li>severe, where there is a serious barrier but there is a work around</li>
+      <li>blocker, where there is a complete block that cannot be circumvented</li>
+    </ul>
+  </li>
+  <li>who is responsible for conforming to the success criteria, including:
+    <ul class="nhsuk-u-margin-top-2">
+      <li>content editors</li>
+      <li>designers</li>
+      <li>developers</li>
+    </ul>
+  </li>
+  <li>levels of knowledge required to test the success criteria, how long it would take to test, and what kind of testing it involves</li>
+</ul>
+
+<div class="nhsuk-action-link nhsuk-u-margin-top-8">
+  <a class="nhsuk-action-link__link" href="{{ 'checklist' | url }}">
+    <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
+      <path d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+    </svg>
+    <span class="nhsuk-action-link__text">View the accessibility checklist</span>
+  </a>
+</div>
