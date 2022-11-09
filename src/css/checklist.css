@@ -81,12 +81,13 @@ th button span::after {
   border-bottom: 2px solid #d8dde0;
 }
 
-.nav-checklist__item {
+.nav-checklist__item { /* stylelint-disable-line selector-class-pattern */
   display: inline-block;
   margin-right: 1em;
 }
 
-[aria-current="page"], [aria-current="page"]:visited  {
+[aria-current="page"],
+[aria-current="page"]:visited {
   color: #212b32;
   font-weight: bold;
   text-decoration: none;
