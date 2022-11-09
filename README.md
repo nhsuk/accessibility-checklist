@@ -20,4 +20,4 @@ If you can't run this site locally, you can [view the site here](https://nhsuk.g
 
 ## Contribute
 
-Feeback is welcome. Feel free to [submit an issue](./issues) or [open a pull request](./pulls)
+Feeback is welcome. Feel free to [submit an issue](https://github.com/nhsuk/accessibility-checklist/issues) or [open a pull request](https://github.com/nhsuk/accessibility-checklist/pulls)
