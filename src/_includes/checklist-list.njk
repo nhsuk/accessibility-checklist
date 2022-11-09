@@ -1,0 +1,8 @@
+<nav class="nav-checklist">
+  <ul class="nhsuk-list">
+    <li class="nav-checklist__item">{% if page.url == '/checklist-full/' %}<span class="nhsuk-u-visually-hidden">Current page:</span> <strong>Full checklist</strong>{% else %}<a href="{{ '/checklist-full' | url }}">Full checklist</a>{% endif %}</li>
+    <li class="nav-checklist__item">{% if page.url == '/checklist-content/' %}<span class="nhsuk-u-visually-hidden">Current page:</span><strong>Content checklist</strong>{% else %}<a href="{{ '/checklist-content' | url }}">Content checklist</a>{% endif %}</li>
+    <li class="nav-checklist__item">{% if page.url == '/checklist-designer/' %}<span class="nhsuk-u-visually-hidden">Current page:</span><strong>Designer checklist</strong>{% else %}<a href="{{ '/checklist-designer' | url }}">Designer checklist</a>{% endif %}</li>
+    <li class="nav-checklist__item">{% if page.url == '/checklist-developer/' %}<span class="nhsuk-u-visually-hidden">Current page:</span><strong>Developer checklist</strong>{% else %}<a href="{{ '/checklist-developer' | url }}">Developer checklist</a>{% endif %}</li>
+  </ul>
+</nav>

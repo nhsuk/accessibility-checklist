@@ -17,31 +17,14 @@ module.exports = function (eleventyConfig) {
     }
   });
 
-  eleventyConfig.addCollection("byResponsibility", function(collectionApi) {
-    return collectionApi.getAll().filter(function(item) {
-      // Side-step tags and do your own filtering
-      return "knowledgeToTest" in item.data;
-    });
-  });
+  // Sort by filter function.
+  function sortByOrder(values) {
+    let vals = [...values]
+    return vals.sort((a, b) => Math.sign(a.data.order - b.data.order))
+  }
 
-  /* eleventyConfig.addCollection("byResponsibility", function(collectionApi) {
-    return collectionApi.getFilteredByTag("responsibility");
-  }); */
-
-
-  eleventyConfig.addCollection("sortByInteraction", (collection) =>
-    collection.getFilteredByGlob("pages/*.md").sort((a, b) => {
-      if (a.data.interaction > b.data.interaction) return -1;
-      else if (a.data.interaction < b.data.interaction) return 1;
-      else return 0;
-    })
-  );
-
-  eleventyConfig.addCollection("getIteraction", function(collection) {
-    return collection.getAll().filter(function(item) {
-      return "timeToTest" in item.data;
-    });
-  });
+  // Add the filter.
+  eleventyConfig.addFilter('sortByOrder', sortByOrder);
 
   return {
     dir: {

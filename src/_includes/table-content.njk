@@ -1,0 +1,52 @@
+<tr class="nhsuk-table__row">
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Success criteria </span>
+    {%- if pages.data.understandingScURL -%}
+      <a href="{{ pages.data.understandingScURL }}">{{ pages.data.successCriteria }}</a>
+    {%- else %}
+      {{ pages.data.successCriteria }}
+    {%- endif %}
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Level </span>{{ pages.data.conformanceLevel }}
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Description </span>
+    {%- if (pages.url) and (pages.data.description) -%}
+      <a href="{{ pages.url | url }}">{{ pages.data.description }}</a>
+    {%- endif %}
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Interaction </span>
+    {%- if pages.data.interaction -%}
+      {{ pages.data.interaction | join(",  ") | safe  }}
+    {%- endif %}
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Severity </span>
+    {%- if pages.data.severity -%}
+      {{ pages.data.severity | join(",  ") | safe }}
+    {%- endif %}
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Responsibility </span>
+    {%- if pages.data.responsibility -%}
+      {{ pages.data.responsibility | join(",<br> ") | safe }}
+    {%- endif %}
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Knowledge to test </span>{{ pages.data.knowledgeToTest }}
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Time to test </span>
+    {%- if pages.data.timeToTest -%}
+      {{ pages.data.timeToTest | join(",<br> ") | safe }}
+    {%- endif %}
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Test procedure </span>
+    {%- if pages.data.testProcedure -%}
+      {{ pages.data.testProcedure | join(",<br> ") | safe }}
+    {%- endif %}
+  </td>
+</tr>

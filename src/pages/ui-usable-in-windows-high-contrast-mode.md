@@ -31,6 +31,8 @@ topic:
 understandingScURL:
 userImpact:
   - Text must meet a minimum contrast ratio to ensure users – especially those with low vision – can read comfortably
+order:
+  - 59
 ---
 
 # {{ title }}

@@ -1,0 +1,53 @@
+{% set filtercheck = 'full' %}
+
+{% if 'content' in page.url %}
+  {% set filtercheck = 'Content' %}
+{% endif %}
+
+{% if 'designer' in page.url %}
+  {% set filtercheck = 'Designer' %}
+{% endif %}
+
+{% if 'developer' in page.url %}
+  {% set filtercheck = 'Developer' %}
+{% endif %}
+
+<table class="sortable show-unsorted-icon nhsuk-table-responsive">
+  
+  <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Accessibility checklist and guidance, column headers with buttons are sortable</caption>
+  
+  <thead role="rowgroup" class="nhsuk-table__head">
+    <tr role="row">
+      <th role="columnheader" scope="col" class="sortable-col">Success criteria</th>
+      <th role="columnheader" scope="col" class="sortable-col">Level</th>
+      <th role="columnheader" scope="col">Description</th>
+      <th role="columnheader" scope="col" class="sortable-col">Interaction</th>
+      <th role="columnheader" scope="col" class="sortable-col">Severity</th>
+      <th role="columnheader" scope="col" class="sortable-col">Responsibility</th>
+      <th role="columnheader" scope="col" class="sortable-col">Knowledge to test</th>
+      <th role="columnheader" scope="col" class="sortable-col">Time to test</th>
+      <th role="columnheader" scope="col">Test procedure</th>
+    </tr>
+  </thead>
+
+  <tbody class="nhsuk-table__body">
+  {%- for pages in collections.pages | sortByOrder -%}
+    
+    {%- if filtercheck == 'full' -%}
+      
+      {% include "table-content.njk" %}
+    
+    {% else %}
+      
+      {%- if (filtercheck) in pages.data.responsibility -%}
+        
+        {% include "table-content.njk" %}
+      
+      {%- endif %}
+    
+    {%- endif %}
+    
+  {%- endfor -%}
+  </tbody>
+
+</table>
