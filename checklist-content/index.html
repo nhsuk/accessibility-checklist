@@ -1,0 +1,527 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Accessibility checklist and guidance for content designers - NHS</title>
+    <link rel="stylesheet" href="/accessibility-checklist/css/nhsuk-frontend.css">
+    <link rel="stylesheet" href="/accessibility-checklist/css/checklist.css">
+    <script src="/accessibility-checklist/js/scripts.js" defer></script>
+  </head>
+  <body>
+
+    <header class="nhsuk-header" role="banner">
+      <div class="nhsuk-width-container-fluid nhsuk-header__container">
+        <div class="nhsuk-header__logo"><a class="nhsuk-header__link nhsuk-header__link--service" href="/accessibility-checklist/">
+            <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 16" height="40" width="100">
+              <path class="nhsuk-logo__background" fill="#005eb8" d="M0 0h40v16H0z"></path>
+              <path class="nhsuk-logo__text" fill="#fff" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"></path>
+            </svg>
+            <span class="nhsuk-header__service-name">
+              Accessibility checklist
+          </span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <div class="nhsuk-width-container-fluid">
+      <main class="nhsuk-main-wrapper" id="maincontent">
+        
+<h1>Accessibility checklist and guidance for content designers</h1>
+
+<nav class="nav-checklist">
+  <ul class="nhsuk-list">
+    <li class="nav-checklist__item"><a href="/accessibility-checklist/checklist-full">Full checklist</a></li>
+    <li class="nav-checklist__item"><span class="nhsuk-u-visually-hidden">Current page:</span><strong>Content checklist</strong></li>
+    <li class="nav-checklist__item"><a href="/accessibility-checklist/checklist-designer">Designer checklist</a></li>
+    <li class="nav-checklist__item"><a href="/accessibility-checklist/checklist-developer">Developer checklist</a></li>
+  </ul>
+</nav>
+
+
+
+
+  
+
+
+
+
+
+
+<table class="sortable show-unsorted-icon nhsuk-table-responsive">
+  
+  <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Accessibility checklist and guidance, column headers with buttons are sortable</caption>
+  
+  <thead role="rowgroup" class="nhsuk-table__head">
+    <tr role="row">
+      <th role="columnheader" scope="col" class="sortable-col">Success criteria</th>
+      <th role="columnheader" scope="col" class="sortable-col">Level</th>
+      <th role="columnheader" scope="col">Description</th>
+      <th role="columnheader" scope="col" class="sortable-col">Interaction</th>
+      <th role="columnheader" scope="col" class="sortable-col">Severity</th>
+      <th role="columnheader" scope="col" class="sortable-col">Responsibility</th>
+      <th role="columnheader" scope="col" class="sortable-col">Knowledge to test</th>
+      <th role="columnheader" scope="col" class="sortable-col">Time to test</th>
+      <th role="columnheader" scope="col">Test procedure</th>
+    </tr>
+  </thead>
+
+  <tbody class="nhsuk-table__body"><tr class="nhsuk-table__row">
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Success criteria </span><a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html">1.1.1 Non-text Content</a>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Level </span>A
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Description </span><a href="/accessibility-checklist/pages/1.1.1-images-conveying-meaning-have-suitable-alt-else-null/">Images that convey meaning have suitable alternative text and images that serve a decorative purpose have a null alternative text assigned</a>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Interaction </span>Screen reader
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Severity </span>Minor,  Moderate,  Severe
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Responsibility </span>Content,<br> Developer
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Knowledge to test </span>Medium
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Time to test </span>Medium
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Test procedure </span>ARC Toolkit,<br> Manual,<br> Some support from tools,<br> Screen reader
+  </td>
+</tr><tr class="nhsuk-table__row">
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Success criteria </span><a href="https://www.w3.org/WAI/WCAG21/Understanding/audio-only-and-video-only-prerecorded.html">1.2.1 Audio-only and Video-only (Prerecorded)</a>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Level </span>A
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Description </span><a href="/accessibility-checklist/pages/1.2.1-transcript-is-provided-for-audio-only-content/">A transcript is provided for audio only content (such as a podcast)</a>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Interaction </span>Cognition,  Deafness
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Severity </span>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Responsibility </span>Content,<br> Designer
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Knowledge to test </span>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Time to test </span>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Test procedure </span>Manual,<br> Visual inspection
+  </td>
+</tr><tr class="nhsuk-table__row">
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Success criteria </span><a href="https://www.w3.org/WAI/WCAG21/Understanding/audio-only-and-video-only-prerecorded.html">1.2.1 Audio-only and Video-only (Prerecorded)</a>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Level </span>A
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Description </span><a href="/accessibility-checklist/pages/1.2.1-video-content-also-available-as-audio-or-text/">Essential content that is communicated visually in videos is also availabel as audio or text</a>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Interaction </span>Screen reader
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Severity </span>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Responsibility </span>Content,<br> Designer
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Knowledge to test </span>Easy
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Time to test </span>Long
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Test procedure </span>Manual,<br> Visual inspection
+  </td>
+</tr><tr class="nhsuk-table__row">
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Success criteria </span><a href="https://www.w3.org/WAI/WCAG21/Understanding/captions-prerecorded.html">1.2.2 Captions (prerecorded)</a>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Level </span>A
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Description </span><a href="/accessibility-checklist/pages/1.2.2-captions-provided-with-audio-prerecorded/">Captions are provided for video with audio</a>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Interaction </span>Cognition,  Deafness
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Severity </span>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Responsibility </span>Content,<br> Designer
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Knowledge to test </span>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Time to test </span>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Test procedure </span>Manual,<br> Visual inspection
+  </td>
+</tr><tr class="nhsuk-table__row">
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Success criteria </span><a href="https://www.w3.org/WAI/WCAG21/Understanding/audio-description-prerecorded.html">1.2.3 Audio Description or Media Alternative (Prerecorded)</a>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Level </span>A
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Description </span><a href="/accessibility-checklist/pages/1.2.3-video-content-audio-description/">When there is audiovisual content (video) you can work out what is going on from the audio or an audio description is provided</a>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Interaction </span>Screen reader
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Severity </span>Blocker
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Responsibility </span>Content,<br> Designer
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Knowledge to test </span>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Time to test </span>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Test procedure </span>Manual,<br> Visual inspection
+  </td>
+</tr><tr class="nhsuk-table__row">
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Success criteria </span><a href="https://www.w3.org/WAI/WCAG21/Understanding/captions-live.html">1.2.4 Captions (Live)</a>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Level </span>AA
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Description </span><a href="/accessibility-checklist/pages/1.2.4-captions-provided-with-audio-live/">Captions are provided for video with audio</a>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Interaction </span>Cognition,  Deafness
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Severity </span>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Responsibility </span>Content,<br> Designer
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Knowledge to test </span>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Time to test </span>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Test procedure </span>Manual,<br> Visual inspection
+  </td>
+</tr><tr class="nhsuk-table__row">
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Success criteria </span><a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html">1.3.1 Info and Relationships</a>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Level </span>A
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Description </span><a href="/accessibility-checklist/pages/1.3.1-HTML-structure-and-semantice-reflect-intent/">The HTML structure and semantices reflects the intent - landmarks, headings, lists, data tables</a>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Interaction </span>Screen reader
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Severity </span>Minor,  Moderate,  Severe
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Responsibility </span>Content,<br> Developer
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Knowledge to test </span>Medium
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Time to test </span>Medium
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Test procedure </span>ARC Toolkit,<br> Manual,<br> Screen reader,<br> Some support from tools,<br> Web inspector tool
+  </td>
+</tr><tr class="nhsuk-table__row">
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Success criteria </span><a href="https://www.w3.org/WAI/WCAG21/Understanding/sensory-characteristics.html">1.3.3 Sensory Characteristics</a>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Level </span>A
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Description </span><a href="/accessibility-checklist/pages/1.3.3-instructions-dont-rely-on-shape-sound-location/">Instructions provided for understanding and interacting with content does not solely rely on shape, size, sound, visual location or orientation</a>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Interaction </span>Screen reader
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Severity </span>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Responsibility </span>Content,<br> Designer
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Knowledge to test </span>Easy
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Time to test </span>Quick
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Test procedure </span>Manual,<br> Visual inspection
+  </td>
+</tr><tr class="nhsuk-table__row">
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Success criteria </span><a href="https://www.w3.org/WAI/WCAG21/Understanding/page-titled.html">2.4.2 Page Titles</a>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Level </span>A
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Description </span><a href="/accessibility-checklist/pages/2.4.2-page-titles-are-unique-and-reflect-purpose/">Page titles are unique and reflect the purpose of the page</a>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Interaction </span>Screen reader
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Severity </span>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Responsibility </span>Content,<br> Developer
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Knowledge to test </span>Easy
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Time to test </span>Quick
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Test procedure </span>ARC Toolkit,<br> Browser,<br> Inspect code,<br> Manual,<br> Screen reader
+  </td>
+</tr><tr class="nhsuk-table__row">
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Success criteria </span><a href="https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html">2.4.4 Link Purpose</a>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Level </span>A
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Description </span><a href="/accessibility-checklist/pages/2.4.4-ambiguous-link-phrases-not-used/">Ambiguous lonk phrases have not been used. The purpose of the link can be determined from the link text alone or it has been programmatically defined.</a>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Interaction </span>Cognition,  Screen reader
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Severity </span>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Responsibility </span>Content,<br> Designer,<br> Developer
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Knowledge to test </span>Medium
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Time to test </span>Quick
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Test procedure </span>Manual,<br> Screen reader,<br> Some support from tools,<br> Visual inspection
+  </td>
+</tr><tr class="nhsuk-table__row">
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Success criteria </span><a href="https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels.html">2.4.6 Headings and Labels</a>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Level </span>AA
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Description </span><a href="/accessibility-checklist/pages/2.4.6-heading-labels-describe-topic/">Headings and labels clearly describe the topic or purpose</a>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Interaction </span>Cognition,  Screen reader
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Severity </span>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Responsibility </span>Content
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Knowledge to test </span>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Time to test </span>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Test procedure </span>Manual,<br> Visual inspection
+  </td>
+</tr><tr class="nhsuk-table__row">
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Success criteria </span><a href="https://www.w3.org/WAI/WCAG21/Understanding/language-of-parts.html">3.1.2 Language of Parts</a>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Level </span>AA
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Description </span><a href="/accessibility-checklist/pages/3.1.2-correct-language-codes-on-page-have-been-set/">Correct language codes for different languages on the page has been set where applicable</a>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Interaction </span>Screen reader
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Severity </span>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Responsibility </span>Content,<br> Developer
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Knowledge to test </span>Medium
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Time to test </span>Quick
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Test procedure </span>Manual,<br> Web inspector tool
+  </td>
+</tr><tr class="nhsuk-table__row">
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Success criteria </span><a href="https://www.w3.org/WAI/WCAG21/Understanding/consistent-identification.html">3.2.4 Consistent Identification</a>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Level </span>AA
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Description </span><a href="/accessibility-checklist/pages/3.2.4-terms-used-for-functionality-consistently-used/">Terms used for functionality are consistently used</a>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Interaction </span>Cognition
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Severity </span>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Responsibility </span>Content,<br> Designer
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Knowledge to test </span>Easy
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Time to test </span>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Test procedure </span>Manual,<br> Visial inspection
+  </td>
+</tr><tr class="nhsuk-table__row">
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Success criteria </span><a href="https://www.w3.org/WAI/WCAG21/Understanding/error-identification.html">3.3.1 Error Identification</a>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Level </span>A
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Description </span><a href="/accessibility-checklist/pages/3.3.1-errors-can-be-identified-and-described/">Where an error occurs, the issue can be identified and is described to the user in text</a>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Interaction </span>Cognition
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Severity </span>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Responsibility </span>Content,<br> Designer
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Knowledge to test </span>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Time to test </span>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Test procedure </span>Manual,<br> Visual inspection
+  </td>
+</tr><tr class="nhsuk-table__row">
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Success criteria </span><a href="https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions.html">3.3.2 Labels or Instructions</a>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Level </span>A
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Description </span><a href="/accessibility-checklist/pages/3.3.2-appropriate-labels-instructions-are-provided/">Appropiate labels or instructions are provided when content requires user input, form fabels are always visible</a>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Interaction </span>Cognition
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Severity </span>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Responsibility </span>Content
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Knowledge to test </span>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Time to test </span>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Test procedure </span>Manual,<br> Visual inspection
+  </td>
+</tr><tr class="nhsuk-table__row">
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Success criteria </span><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-suggestions.html">3.3.3 Error suggestion</a>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Level </span>AA
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Description </span><a href="/accessibility-checklist/pages/3.3.3-error-messages-are-useful/">Error messages are actually useful, e.g. provide a useful next step or way of entering valid data</a>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Interaction </span>Cognition
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Severity </span>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Responsibility </span>Content,<br> Designer,<br> Developer
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Knowledge to test </span>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Time to test </span>
+  </td>
+  <td class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading">Test procedure </span>Manual,<br> Visual inspection
+  </td>
+</tr></tbody>
+
+</table>
+
+      </main>
+    </div>
+
+  </body>
+</html>

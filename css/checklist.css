@@ -75,3 +75,19 @@ th button span::after {
   right: -5px;
   top: 2px;
 }
+
+/* navigation */
+.nav-checklist {
+  border-bottom: 2px solid #d8dde0;
+}
+
+.nav-checklist__item {
+  display: inline-block;
+  margin-right: 1em;
+}
+
+[aria-current="page"], [aria-current="page"]:visited  {
+  color: #212b32;
+  font-weight: bold;
+  text-decoration: none;
+}
